@@ -35,8 +35,8 @@ export default function Educationpreview({
       <div className="flex flex-col gap-2 min-h-10">
         {resumeInfo?.education?.length === 0 && (
           <p className="text-[13px] leading-4 text-justify italic">
-            Add your educational background. You can also generate description
-            educational background with our AI feature.
+            Add your educational background such as university, degree, major,
+            and graduation date.
           </p>
         )}
         {resumeInfo?.education?.map((education, index) => (

@@ -35,8 +35,7 @@ export default function SkillsPreview({
       <div className="grid grid-cols-2 gap-3 pt-3 my-1 min-h-10">
         {resumeInfo?.skills?.length === 0 && (
           <p className="text-[13px] leading-4 text-justify italic">
-            Add your skills. You can also generate description skills with our
-            AI feature.
+            Add your skills to showcase your expertise.
           </p>
         )}
         {resumeInfo?.skills?.map((skill, index) => (
