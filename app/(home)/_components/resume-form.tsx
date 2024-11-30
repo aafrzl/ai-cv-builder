@@ -5,6 +5,7 @@ import { useResumeContext } from "@/context/resume-info-provider";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import PersonalInfoForm from "./forms/personal-info-form";
+import SummaryForm from "./forms/summary-form";
 
 const LISTTITLE = [
   {
@@ -81,7 +82,7 @@ export default function ResumeForm() {
         <div className="px-5 py-3 pb-5">
           {/* TODO: Make each form component for user can input information resume or CV */}
           {activeIndex === 1 && <PersonalInfoForm handleNext={handleNext} />}
-          {activeIndex === 2 && <div>Summary Form</div>}
+          {activeIndex === 2 && <SummaryForm handleNext={handleNext} />}
           {activeIndex === 3 && <div>Professional Experience Form</div>}
           {activeIndex === 4 && <div>Education Form</div>}
           {activeIndex === 5 && <div>Skills Form</div>}

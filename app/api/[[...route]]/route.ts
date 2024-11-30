@@ -3,6 +3,7 @@ import { logger } from "hono/logger";
 import { HTTPException } from "hono/http-exception";
 import { handle } from "hono/vercel";
 import documentRoute from "./document";
+import aiRoute from "./ai";
 
 export const runtime = "edge";
 
@@ -18,7 +19,10 @@ app.onError((err, c) => {
   return c.json({ error: "Internal Server Error" }, 500);
 });
 
-const routes = app.basePath("/api").route("/document", documentRoute);
+const routes = app
+  .basePath("/api")
+  .route("/document", documentRoute)
+  .route("/ai", aiRoute);
 
 app.get("/hello", (c) => {
   return c.json({
