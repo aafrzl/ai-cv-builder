@@ -15,7 +15,7 @@ export default function SummaryPreview({
       {isLoading ? (
         <Skeleton className="h-6 w-full" />
       ) : (
-        <p className="text-[13px] leading-4 text-justify">
+        <p className="text-[13px] leading-4 text-justify italic">
           {resumeInfo?.summary ||
             "A summary is a brief statement or account of the main points of something."}
         </p>

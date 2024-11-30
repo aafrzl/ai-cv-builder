@@ -33,7 +33,13 @@ export default function Educationpreview({
       />
 
       <div className="flex flex-col gap-2 min-h-10">
-        {resumeInfo?.educations?.map((education, index) => (
+        {resumeInfo?.education?.length === 0 && (
+          <p className="text-[13px] leading-4 text-justify italic">
+            Add your educational background. You can also generate description
+            educational background with our AI feature.
+          </p>
+        )}
+        {resumeInfo?.education?.map((education, index) => (
           <div key={index}>
             <h5
               className="text-base font-semibold"

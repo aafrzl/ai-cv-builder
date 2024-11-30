@@ -33,7 +33,13 @@ export default function ExperiencePreview({
       />
 
       <div className="flex flex-col gap-2 min-h-10">
-        {resumeInfo?.experiences?.map((experience, index) => (
+        {resumeInfo?.experience?.length === 0 && (
+          <p className="text-[13px] leading-4 text-justify italic">
+            Add your professional experience. You can also generate description
+            professional experience with our AI feature.
+          </p>
+        )}
+        {resumeInfo?.experience?.map((experience, index) => (
           <div key={index}>
             <h5
               className="text-base font-semibold"
