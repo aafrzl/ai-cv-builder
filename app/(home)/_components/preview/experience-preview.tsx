@@ -1,7 +1,8 @@
 import SkeletonLoader from "@/components/loading-skeleton/skeleton-loader";
 import { Separator } from "@/components/ui/separator";
-import { INITIAL_COLOR_THEME } from "@/lib/helper";
+import { formatDate, INITIAL_COLOR_THEME } from "@/lib/helper";
 import { ResumeDataType } from "@/types/resume.type";
+import { format } from "date-fns";
 
 interface ExperiencePreviewProps {
   isLoading: boolean;
@@ -58,9 +59,11 @@ export default function ExperiencePreview({
                 {experience.state}
               </h5>
               <span className="text-[13px]">
-                {experience.startDate}
+                {formatDate(experience.startDate as string)}
                 {" - "}
-                {experience.currentlyWorking ? "Present" : experience.endDate}
+                {experience.currentlyWorking
+                  ? "Present"
+                  : formatDate(experience.startDate as string)}
               </span>
             </div>
             <div

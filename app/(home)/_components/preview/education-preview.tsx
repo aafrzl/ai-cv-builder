@@ -1,6 +1,6 @@
 import SkeletonLoader from "@/components/loading-skeleton/skeleton-loader";
 import { Separator } from "@/components/ui/separator";
-import { INITIAL_COLOR_THEME } from "@/lib/helper";
+import { formatDate, INITIAL_COLOR_THEME } from "@/lib/helper";
 import { ResumeDataType } from "@/types/resume.type";
 
 interface EducationPreviewProps {
@@ -56,9 +56,9 @@ export default function Educationpreview({
                 {education.major}
               </h5>
               <span className="text-[13px]">
-                {education.startDate}
+                {formatDate(education.startDate as string)}
                 {" - "}
-                {education.endDate}
+                {formatDate(education.endDate as string)}
               </span>
             </div>
             <p className="text-[13px] my-2 leading-4">

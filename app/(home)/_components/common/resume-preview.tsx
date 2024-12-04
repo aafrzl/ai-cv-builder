@@ -2,12 +2,11 @@
 
 import { Card } from "@/components/ui/card";
 import { useResumeContext } from "@/context/resume-info-provider";
-import { useEffect, useState } from "react";
-import PersonalInfo from "../preview/personal-info";
-import SummaryPreview from "../preview/summary-preview";
-import ExperiencePreview from "../preview/experience-preview";
 import Educationpreview from "../preview/education-preview";
+import ExperiencePreview from "../preview/experience-preview";
+import PersonalInfo from "../preview/personal-info";
 import SkillsPreview from "../preview/skills-preview";
+import SummaryPreview from "../preview/summary-preview";
 
 export default function ResumePreview() {
   const { resumeInfo, isLoading } = useResumeContext();

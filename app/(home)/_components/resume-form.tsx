@@ -7,6 +7,7 @@ import { useState } from "react";
 import PersonalInfoForm from "./forms/personal-info-form";
 import SummaryForm from "./forms/summary-form";
 import EducationForm from "./forms/education-form";
+import ExperienceForm from "./forms/experience-form";
 
 const LISTTITLE = [
   {
@@ -84,7 +85,7 @@ export default function ResumeForm() {
           {/* TODO: Make each form component for user can input information resume or CV */}
           {activeIndex === 1 && <PersonalInfoForm handleNext={handleNext} />}
           {activeIndex === 2 && <SummaryForm handleNext={handleNext} />}
-          {activeIndex === 3 && <div>Professional Experience</div>}
+          {activeIndex === 3 && <ExperienceForm handleNext={handleNext} />}
           {activeIndex === 4 && <EducationForm handleNext={handleNext} />}
           {activeIndex === 5 && <div>Skills Form</div>}
         </div>

@@ -18,6 +18,16 @@ body {
   padding-left: 15px !important;
 }
 
+.rsw-ce ul {
+  list-style: disc;
+  padding-left: 2em;
+}
+
+.rsw-ce ol {
+  list-style: decimal;
+  padding-left: 2em;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
