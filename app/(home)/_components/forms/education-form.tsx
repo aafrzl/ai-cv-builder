@@ -13,7 +13,7 @@ interface Props {
   handleNext: () => void;
 }
 
-const inititalState = {
+const initialState = {
   id: undefined,
   docId: undefined,
   universityName: "",
@@ -32,7 +32,7 @@ export default function EducationForm({ handleNext }: Props) {
   const [educationList, setEducationList] = useState(() => {
     return resumeInfo?.education?.length
       ? resumeInfo.education
-      : [inititalState];
+      : [initialState];
   });
 
   useEffect(() => {
@@ -97,7 +97,7 @@ export default function EducationForm({ handleNext }: Props) {
   };
 
   const addNewEducation = () => {
-    setEducationList([...educationList, inititalState]);
+    setEducationList([...educationList, initialState]);
   };
 
   const removeEducation = (index: number) => {
