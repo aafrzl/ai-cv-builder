@@ -21,9 +21,7 @@ export default function DashboardPage() {
         <div className="w-full pt-11">
           <h5 className="text-xl font-semibold mb-3">All Resume</h5>
           <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 gap-2 items-center">
-            {/* TODO: Add resume */}
             <AddResume />
-            {/* TODO: List all resume from database */}
             <ResumeList />
           </div>
         </div>

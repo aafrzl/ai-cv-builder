@@ -8,6 +8,7 @@ import PersonalInfoForm from "./forms/personal-info-form";
 import SummaryForm from "./forms/summary-form";
 import EducationForm from "./forms/education-form";
 import ExperienceForm from "./forms/experience-form";
+import SkillForm from "./forms/skill-form";
 
 const LISTTITLE = [
   {
@@ -82,12 +83,11 @@ export default function ResumeForm() {
           </div>
         </div>
         <div className="px-5 py-3 pb-5">
-          {/* TODO: Make each form component for user can input information resume or CV */}
           {activeIndex === 1 && <PersonalInfoForm handleNext={handleNext} />}
           {activeIndex === 2 && <SummaryForm handleNext={handleNext} />}
           {activeIndex === 3 && <ExperienceForm handleNext={handleNext} />}
           {activeIndex === 4 && <EducationForm handleNext={handleNext} />}
-          {activeIndex === 5 && <div>Skills Form</div>}
+          {activeIndex === 5 && <SkillForm />}
         </div>
       </Card>
     </div>
