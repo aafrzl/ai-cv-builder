@@ -3,9 +3,41 @@ import { useResumeContext } from "@/context/resume-info-provider";
 import { AlertCircle } from "lucide-react";
 import React from "react";
 import ResumeTitle from "./resume-title";
+import useUpdateDocument from "@/features/document/use-update-document";
+import { toast } from "@/hooks/use-toast";
 
 export default function TopSection() {
-  const { resumeInfo } = useResumeContext();
+  const { resumeInfo, isLoading, onUpdate } = useResumeContext();
+  const { mutateAsync, isPending } = useUpdateDocument();
+
+  const handleChangeTitle = async (title: string) => {
+    if (title === "Untitled Resume" && !title) return;
+
+    if (resumeInfo) {
+      onUpdate({ ...resumeInfo, title });
+    }
+
+    mutateAsync(
+      {
+        title: title,
+      },
+      {
+        onSuccess: () => {
+          toast({
+            title: "Success",
+            description: "Resume title updated successfully",
+          });
+        },
+        onError: () => {
+          toast({
+            title: "Error",
+            description: "Failed to update resume title",
+            variant: "destructive",
+          });
+        },
+      }
+    );
+  };
 
   return (
     <>
@@ -22,9 +54,9 @@ export default function TopSection() {
         <div className="flex items-center gap-2">
           <ResumeTitle
             initialTitle={resumeInfo?.title || ""}
-            isLoading={false}
+            isLoading={isLoading || isPending}
             status={resumeInfo?.status}
-            onSave={(value) => console.log(value)}
+            onSave={(value) => handleChangeTitle(value)}
           />
         </div>
       </div>
