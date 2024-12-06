@@ -44,3 +44,63 @@ export function formatDate(date: string): string {
 
   return format(new Date(date), "dd MMM yyyy");
 }
+
+export const listColors: string[] = [
+  // Reds
+  "#FF0000", // Red
+  "#DC143C", // Crimson
+  "#B22222", // Firebrick
+  "#FF4500", // OrangeRed
+  "#FF6347", // Tomato
+
+  // Oranges
+  "#FFA500", // Orange
+  "#FF5722", // Deep Orange
+  "#FF7F50", // Coral
+  "#FF8C00", // Dark Orange
+  "#FF9800", // Material Orange
+
+  // Yellows
+  "#FFFF00", // Yellow
+  "#FFD700", // Gold
+  "#FFF700", // Bright Yellow
+  "#FFDE03", // Vivid Yellow
+
+  // Greens
+  "#00FF00", // Green
+  "#32CD32", // Lime Green
+  "#228B22", // Forest Green
+  "#008000", // Dark Green
+  "#00FF7F", // Spring Green
+
+  // Blues
+  "#0000FF", // Blue
+  "#1E90FF", // Dodger Blue
+  "#4169E1", // Royal Blue
+  "#00BFFF", // Deep Sky Blue
+  "#87CEEB", // Sky Blue
+
+  // Purples
+  "#800080", // Purple
+  "#8A2BE2", // Blue Violet
+  "#9932CC", // Dark Orchid
+  "#BA55D3", // Medium Orchid
+  "#DA70D6", // Orchid
+
+  // Pinks
+  "#FFC0CB", // Pink
+  "#FF69B4", // Hot Pink
+  "#FF1493", // Deep Pink
+  "#DB7093", // Pale Violet Red
+
+  // Browns
+  "#A52A2A", // Brown
+  "#8B4513", // Saddle Brown
+  "#D2691E", // Chocolate
+  "#CD853F", // Peru
+
+  // Grays
+  "#808080", // Gray
+  "#A9A9A9", // Dark Gray
+  "#D3D3D3", // Light Gray
+];

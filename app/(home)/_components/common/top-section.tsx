@@ -5,6 +5,7 @@ import React from "react";
 import ResumeTitle from "./resume-title";
 import useUpdateDocument from "@/features/document/use-update-document";
 import { toast } from "@/hooks/use-toast";
+import ThemeColor from "./theme-color";
 
 export default function TopSection() {
   const { resumeInfo, isLoading, onUpdate } = useResumeContext();
@@ -58,6 +59,9 @@ export default function TopSection() {
             status={resumeInfo?.status}
             onSave={(value) => handleChangeTitle(value)}
           />
+        </div>
+        <div className="flex items-center gap-2">
+          <ThemeColor />
         </div>
       </div>
     </>
