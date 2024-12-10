@@ -37,7 +37,7 @@ export default function PreviewModal() {
               {resumeInfo?.title} Preview
             </DialogTitle>
           </DialogHeader>
-          <div className="w-full h-full px-2 pb-4">
+          <div className="w-full h-full px-4 pb-4">
             <ResumePreview />
           </div>
         </DialogContent>
