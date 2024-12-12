@@ -4,6 +4,11 @@ import { format } from "date-fns";
 
 export const INITIAL_COLOR_THEME = "#7c3aed";
 
+export const formatFileName = (title: string, useHypen: boolean = true) => {
+  const delimiter = useHypen ? "-" : "_";
+  return title.trim().replace(/\s+/g, delimiter).toLowerCase();
+};
+
 export const generateDocUUID = (): string => {
   const uuid = uuidv4().replace(/-/g, "");
   return `doc-${uuid.substring(0, 16)}`;

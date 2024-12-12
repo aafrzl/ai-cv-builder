@@ -14,7 +14,7 @@ export default function ResumePreview() {
   return (
     <Card
       id="resume-preview-id"
-      className="w-full h-full bg-white p-10 flex-1 rounded-sm "
+      className="w-full h-full bg-white p-10 flex-[1.02] rounded !font-open-sans"
       style={{
         borderTop: `10px solid ${resumeInfo?.themeColor}`,
       }}

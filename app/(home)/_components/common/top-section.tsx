@@ -7,6 +7,7 @@ import useUpdateDocument from "@/features/document/use-update-document";
 import { toast } from "@/hooks/use-toast";
 import ThemeColor from "./theme-color";
 import PreviewModal from "../preview-modal";
+import DownloadBtn from "./download-btn";
 
 export default function TopSection() {
   const { resumeInfo, isLoading, onUpdate } = useResumeContext();
@@ -64,6 +65,11 @@ export default function TopSection() {
         <div className="flex items-center gap-2">
           <ThemeColor />
           <PreviewModal />
+          <DownloadBtn
+            title={resumeInfo?.title || "Untitled Resume"}
+            status={resumeInfo?.status}
+            isLoading={isLoading}
+          />
         </div>
       </div>
     </>

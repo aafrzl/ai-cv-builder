@@ -27,7 +27,7 @@ export default function PreviewModal() {
             title="Preview"
           >
             <EyeIcon className="size-4" />
-            <span>Preview</span>
+            <span className="hidden lg:flex">Preview</span>
           </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-4xl p-0 w-full max-h-[90vh] lg:max-h-[95vh] overflow-auto">
