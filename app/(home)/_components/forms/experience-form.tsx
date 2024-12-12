@@ -14,8 +14,6 @@ interface Props {
 }
 
 const initialState = {
-  id: undefined,
-  docId: undefined,
   title: "",
   companyName: "",
   city: "",
