@@ -55,7 +55,7 @@ export default function ResumeItem({
               {title}
             </h5>
           </div>
-          <div className="flex items-center text-xs font-medium text-muted-foreground">
+          <div className="flex flex-col gap-1 items-start text-xs font-medium text-muted-foreground">
             <span className="flex items-center gap-1">
               {status === "private" ? (
                 <>
@@ -69,7 +69,6 @@ export default function ResumeItem({
                 </>
               )}
             </span>
-            <Dot className="size-4" />
             <span className="text-xs">
               {formatDistanceToNow(new Date(updatedAt), {
                 addSuffix: false,

@@ -1,11 +1,13 @@
 import { api } from "@/lib/hono-rpc";
 import { useQuery } from "@tanstack/react-query";
 
-const useGetDocumentById = (documentId: string) => {
+const useGetDocumentById = (documentId: string, isPublic: boolean = false) => {
   const query = useQuery({
     queryKey: ["document", documentId],
     queryFn: async () => {
-      const endpoint = api.document[":documentId"];
+      const endpoint = !isPublic
+        ? api.document[":documentId"]
+        : api.document.public.doc[":documentId"];
 
       const response = await endpoint.$get({
         param: {
@@ -24,7 +26,7 @@ const useGetDocumentById = (documentId: string) => {
         success,
       };
     },
-    retry: 3,
+    retry: isPublic ? false : 3,
   });
 
   return query;

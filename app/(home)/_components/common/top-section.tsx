@@ -8,6 +8,7 @@ import { toast } from "@/hooks/use-toast";
 import ThemeColor from "./theme-color";
 import PreviewModal from "../preview-modal";
 import DownloadBtn from "./download-btn";
+import Share from "./share";
 
 export default function TopSection() {
   const { resumeInfo, isLoading, onUpdate } = useResumeContext();
@@ -70,6 +71,7 @@ export default function TopSection() {
             status={resumeInfo?.status}
             isLoading={isLoading}
           />
+          <Share />
         </div>
       </div>
     </>
