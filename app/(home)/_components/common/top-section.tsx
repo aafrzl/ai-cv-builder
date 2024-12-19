@@ -9,6 +9,7 @@ import ThemeColor from "./theme-color";
 import PreviewModal from "../preview-modal";
 import DownloadBtn from "./download-btn";
 import Share from "./share";
+import MoreOptions from "./more-options";
 
 export default function TopSection() {
   const { resumeInfo, isLoading, onUpdate } = useResumeContext();
@@ -72,6 +73,7 @@ export default function TopSection() {
             isLoading={isLoading}
           />
           <Share />
+          <MoreOptions />
         </div>
       </div>
     </>

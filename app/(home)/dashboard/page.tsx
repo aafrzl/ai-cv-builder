@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import AddResume from "../_components/add-resume";
 import ResumeList from "../_components/resume-list";
+import TrashListBox from "../_components/trash-list-box";
 
 export default function DashboardPage() {
   return (
@@ -14,8 +15,7 @@ export default function DashboardPage() {
             </p>
           </div>
           <div className="shrink-0 flex items-center gap-3">
-            {/* TODO: Trash List */}
-            <Button>All Trash</Button>
+            <TrashListBox />
           </div>
         </div>
         <div className="w-full pt-11">

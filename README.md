@@ -7,8 +7,7 @@ Experience Description: "Given the {JobTitle}, create 6-7 concise and personal b
 
 ## Tasks
 
-- [x] Create feature Trash & Restore for resume archive
-- [x] Create backend API for getting resume with status is archive
+- [x] Layouting UI for landing page
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
