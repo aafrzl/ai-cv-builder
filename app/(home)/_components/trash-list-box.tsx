@@ -10,7 +10,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import useGetDocuments from "@/features/document/use-get-documents";
 import useRestoreDocument from "@/features/document/use-restore-document";
 import { format } from "date-fns";
-import { FileText, SearchIcon, Trash2, Undo } from "lucide-react";
+import { FileText, Loader, SearchIcon, Trash2, Undo } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -113,7 +113,11 @@ export default function TrashListBox() {
                       }
                       className="rounded-sm hover:bg-neutral-200 size-6 flex items-center justify-center"
                     >
-                      <Undo className="size-4" />
+                      {isPending ? (
+                        <Loader className="size-4 animate-spin" />
+                      ) : (
+                        <Undo className="size-4" />
+                      )}
                     </div>
                   </div>
                 </div>
