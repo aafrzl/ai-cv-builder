@@ -1,14 +1,3 @@
-## Prompt for AI
-
-Summary : "Job Title: {JobTitle}. Based on the job title, please generate concise and complete summaries for my resume in JSON format, incorporating the following experience
-levels: fresher, mid, and experienced. Each summary should be limited to 3 to 4 lines, reflecting a personal tone and showcasing specific programming langguages, technologies, and methodologies without any placeholders or gaps. Ensure that the summaries are engaging and tailored to hightlight unique strengths, aspirations, and contributions to collaborative projects, demonstrating a clear understanding of the role and industry standards."
-
-Experience Description: "Given the {JobTitle}, create 6-7 concise and personal bullet points in HTML stringify format that hightlight any skills, relevant technologies, and significant contributions in that role. Do not include the job title itself in the output. Provide only the bullet points inside a unordered list."
-
-## Tasks
-
-- [x] Layouting UI for landing page
-
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

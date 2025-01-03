@@ -39,6 +39,7 @@
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.2",
     "lucide-react": "^0.453.0",
+    "motion": "^11.15.0",
     "next": "14.2.8",
     "react": "^18",
     "react-dom": "^18",
